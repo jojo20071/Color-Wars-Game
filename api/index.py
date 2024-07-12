@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/', methods=['GET'])
+@app.route('/h', methods=['GET'])
 def home():
     return("Homescreen :)")
 
