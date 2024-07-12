@@ -4,6 +4,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #de8f70;
 }
 
 .container {
@@ -14,14 +15,44 @@ body, html {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 50px); /* 5 columns */
-    grid-template-rows: repeat(5, 50px); /* 5 rows */
+    grid-template-columns: repeat(5, 90px); /* 5 columns */
+    grid-template-rows: repeat(5, 90px); /* 5 rows */
     gap: 10px;
 }
 
 .square {
-    background-color: orange;
+    background-color: #fae9cf;
     border-radius: 10px; /* Rounded edges */
+    cursor: pointer;
+    position: relative;
+    
+}
+.main-circle {
+    width: 50%; /* Adjust size as needed */
+    height: 50%; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    background-color: blue; /* Example color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.small-circle {
+    width: 20%; /* Adjust size as needed */
+    height: 20%; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    background-color: red; /* Example color */
+    margin: 5%; /* Adjust spacing as needed */
+    width: 45%; /* Adjust so two fit side by side with some space */
+    height: 45%; /* Adjust for square aspect ratio, matching width */
+    margin: 2.5%; /* Adjust spacing between circles */
+    /* Other styles (border-radius, background-color) remain unchanged */
 }
 
 .reset-container {
@@ -34,8 +65,65 @@ body, html {
 .reset {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    background-color: lightgrey;
+    background-color: white;
     border-radius: 0 1000px 1000px 0; /* Half circle shape */
     padding: 20px;
-    padding-right: 30px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: normal;
+    color: #4e4e4e;
 }
+
+
+
+
+
+@media only screen and (max-width: 670px) {
+    .grid {
+        grid-template-columns: repeat(5, 70px); /* 5 columns */
+        grid-template-rows: repeat(5, 70px); /* 5 rows */
+    }
+    .reset {
+        padding: 15px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-family: "Rubik", sans-serif;
+        font-size: 20px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 520px) {
+    .grid {
+        grid-template-columns: repeat(5, 60px); /* 5 columns */
+        grid-template-rows: repeat(5, 60px); /* 5 rows */
+    }
+    .reset {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        padding: 27px;
+        padding-right: 27px;
+        padding-top: 10px;
+        padding-bottom: 27px;
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        border-radius: 0px 0px 1000px 1000px ; /* Half circle shape */
+        max-width: fit-content;
+    }
+    .reset-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+  }
