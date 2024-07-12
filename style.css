@@ -15,44 +15,42 @@ body, html {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 90px); /* 5 columns */
-    grid-template-rows: repeat(5, 90px); /* 5 rows */
+    grid-template-columns: repeat(5, 90px); 
+    grid-template-rows: repeat(5, 90px); 
     gap: 10px;
 }
 
 .square {
     background-color: #fae9cf;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 10px; 
     cursor: pointer;
     position: relative;
     
 }
 .main-circle {
-    width: 50%; /* Adjust size as needed */
-    height: 50%; /* Adjust size as needed */
-    border-radius: 50%; /* Make it circular */
-    background-color: blue; /* Example color */
+    width: 85%;
+    height: 85%; 
+    border-radius: 50%; 
+    background-color: #fe5f59; 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center; /* Adjusted */
+    align-items: center; /* Adjusted */
     flex-wrap: wrap;
-    align-items: center;
-    flex-wrap: wrap;
+    
 }
 .small-circle {
-    width: 20%; /* Adjust size as needed */
-    height: 20%; /* Adjust size as needed */
-    border-radius: 50%; /* Make it circular */
-    background-color: red; /* Example color */
-    margin: 5%; /* Adjust spacing as needed */
-    width: 45%; /* Adjust so two fit side by side with some space */
-    height: 45%; /* Adjust for square aspect ratio, matching width */
-    margin: 2.5%; /* Adjust spacing between circles */
-    /* Other styles (border-radius, background-color) remain unchanged */
+    width: 22%;  /* Adjusted for closer fit */
+    height: 22%; /* Adjusted for closer fit */
+    border-radius: 50%; 
+    background-color: #ffffff; 
+    margin: 5px; /* Adjusted for explicit spacing */
+
+
+    
 }
 
 .reset-container {
@@ -66,7 +64,7 @@ body, html {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     background-color: white;
-    border-radius: 0 1000px 1000px 0; /* Half circle shape */
+    border-radius: 0 1000px 1000px 0; 
     padding: 20px;
     padding-right: 40px;
     padding-top: 40px;
@@ -76,6 +74,10 @@ body, html {
     font-weight: 800;
     font-style: normal;
     color: #4e4e4e;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 
@@ -84,8 +86,8 @@ body, html {
 
 @media only screen and (max-width: 670px) {
     .grid {
-        grid-template-columns: repeat(5, 70px); /* 5 columns */
-        grid-template-rows: repeat(5, 70px); /* 5 rows */
+        grid-template-columns: repeat(5, 70px); 
+        grid-template-rows: repeat(5, 70px); 
     }
     .reset {
         padding: 15px;
@@ -100,8 +102,8 @@ body, html {
 
   @media only screen and (max-width: 520px) {
     .grid {
-        grid-template-columns: repeat(5, 60px); /* 5 columns */
-        grid-template-rows: repeat(5, 60px); /* 5 rows */
+        grid-template-columns: repeat(5, 60px); 
+        grid-template-rows: repeat(5, 60px); 
     }
     .reset {
         writing-mode: horizontal-tb;
@@ -112,7 +114,7 @@ body, html {
         padding-bottom: 27px;
         font-family: "Rubik", sans-serif;
         font-size: 18px;
-        border-radius: 0px 0px 1000px 1000px ; /* Half circle shape */
+        border-radius: 0px 0px 1000px 1000px ; 
         max-width: fit-content;
     }
     .reset-container {
