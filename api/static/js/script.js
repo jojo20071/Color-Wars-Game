@@ -59,7 +59,9 @@ async function updateCirclesFromData() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json()[0].data;
+      const apiData = await response.json();
+      const jsonObject = apiData[0];
+      const data = jsonObject.data;
       
   
       // Iterate through each key in the data object
