@@ -81,7 +81,7 @@ async function updateCirclesFromData() {
         // Clear existing .small-circle elements
         mainCircle.innerHTML = '';
         if (value == 0) {
-            mainCircle.innerHTML = '';
+            squares[i-1].innerHTML = '';
         }
         // Create and append the specified number of .small-circle elements
         for (let i = 0; i < value; i++) {
