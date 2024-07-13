@@ -131,13 +131,18 @@ body, html {
     
   }
 
-@keyframes grow {
+  @keyframes click-feedback {
     from {
-      transform: scale(0);
+      transform: scale(1);
+      background-color: skyblue;
     }
     to {
-      transform: scale(1);
+      transform: scale(0.95);
+      background-color: lightcoral;
     }
-}
-
+  }
+  
+  .clicked {
+    animation: click-feedback 0.2s ease forwards;
+  }
     

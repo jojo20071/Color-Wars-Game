@@ -109,6 +109,13 @@ async function updateCirclesFromData() {
   }
 
 
-
+document.querySelectorAll('.reset-container').forEach(div => {
+    div.addEventListener('click', function() {
+      this.classList.add('clicked');
+      setTimeout(() => {
+        this.classList.remove('clicked');
+      }, 200); // Adjust time to match animation duration
+    });
+});
 
   setInterval(updateCirclesFromData, 500);
