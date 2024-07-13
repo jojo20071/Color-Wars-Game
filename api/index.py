@@ -58,18 +58,14 @@ def get_list():
 
 @app.route('/reset', methods=['GET'])
 def reset_data():
-    try:
-        response = (
-            supabase.table("game_data")
-            .update({"data": {"c": "r", "f1": 0}})
-            .eq("id", 1)
-            .execute()
-        )
-        if response.error:
-            raise Exception(response.error.message)
-        return jsonify({"success": True, "data": response.data}), 200
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
+    response = (
+        supabase.table("game_data")
+        .update({"data": default_json})
+        .eq("id", 1)
+        .execute()
+    )
+    return jsonify({"success": True, "data": response.data}), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)
