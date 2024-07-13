@@ -38,19 +38,16 @@ function addData() {
 }
 
 function resetData() {
-    const dataInput = "hi"
 
-    fetch('https://color-wars-game.vercel.app/add', {
-        method: 'POST',
+
+    fetch('https://color-wars-game.vercel.app/reset', {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ data: dataInput })
+        }
+        
     })
     .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        document.getElementById('dataInput').value = '';
-    })
-    .catch(error => console.error('Error:', error));
 }
+
+
