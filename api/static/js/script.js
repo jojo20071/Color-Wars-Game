@@ -80,10 +80,9 @@ async function updateCirclesFromData() {
         const mainCircle = squares[i-1].querySelector('.main-circle');
         // Clear existing .small-circle elements
         
-        if (value == 0) {
-            squares[i-1].innerHTML = '';
-        }
-        else {
+        squares[i-1].innerHTML = '';
+
+        if (value != 0) {
             const mainCircle = document.createElement('div');
             mainCircle.className = 'main-circle';
             mainCircle.innerHTML = '';
