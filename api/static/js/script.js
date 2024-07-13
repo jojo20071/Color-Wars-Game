@@ -85,6 +85,7 @@ async function updateCirclesFromData() {
         if (value != 0) {
             const mainCircle = document.createElement('div');
             mainCircle.className = 'main-circle';
+            squares[i-1].appendChild(mainCircle);
             mainCircle.innerHTML = '';
 
             for (let i = 0; i < value; i++) {
