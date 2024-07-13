@@ -85,6 +85,7 @@ async function updateCirclesFromData() {
             smallCircle.className = 'small-circle';
             mainCircle.appendChild(smallCircle);
         }
+        console.log(i,value,key);
 
       }
   
