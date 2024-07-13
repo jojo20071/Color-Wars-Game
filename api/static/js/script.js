@@ -100,4 +100,4 @@ async function updateCirclesFromData() {
 
 
 
-  setInterval(updateCirclesFromData, 500);
+  setInterval(updateCirclesFromData, 10);
