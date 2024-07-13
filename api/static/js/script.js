@@ -84,6 +84,9 @@ async function updateCirclesFromData() {
             square.appendChild(circle);
           }
         }
+        else {
+          console.error(`Square not found: #square${i}`);
+        }
       }
   
       return debug;
