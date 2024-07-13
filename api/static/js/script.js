@@ -17,3 +17,22 @@ function setSmallCirclesCount(squareIndex, count) {
         mainCircle.appendChild(smallCircle);
     }
 }
+
+
+function addData() {
+    const dataInput = "hi"
+
+    fetch('http://127.0.0.1:5000/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ data: dataInput })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        document.getElementById('dataInput').value = '';
+    })
+    .catch(error => console.error('Error:', error));
+}
