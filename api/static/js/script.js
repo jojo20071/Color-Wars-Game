@@ -67,8 +67,8 @@ async function updateCirclesFromData() {
         const key = `f${i}`;
         const value = data[key];
 
-        const jsonObject = JSON.parse(data);
-        const f1Value = jsonObject[0].data.f1;
+        const jsonObject = data[0];
+        const f1Value = jsonObject.data.f1;
         debug.push(f1Value);
 
         const square = document.querySelector(`#square${i}`);
