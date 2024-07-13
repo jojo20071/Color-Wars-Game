@@ -43,10 +43,13 @@ def home2():
 def add_data():
     data = request.json.get('data')
     if data:
-        data_list = read_data()
-        data_list.append(data)
-        write_data(data_list)
-        return jsonify({"message": "Data added successfully"}), 201
+        response = (
+            supabase.table("game_data")
+            .update({"data": data})
+            .eq("id", 1)
+            .execute()
+        )
+        return jsonify({"success": True, "data": response.data}), 200
     else:
         return jsonify({"message": "No data provided"}), 400
 
