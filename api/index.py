@@ -57,7 +57,7 @@ def add_data():
 @app.route('/list', methods=['GET'])
 def get_list():
     response = supabase.table("game_data").select("data").execute()
-    return jsonify({"success": True, "data": response.data}), 200
+    return jsonify({"data": response.data}), 200
 
 @app.route('/reset', methods=['GET'])
 def reset_data():
