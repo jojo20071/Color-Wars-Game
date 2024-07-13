@@ -66,11 +66,12 @@ async function updateCirclesFromData() {
   
       // Iterate through each key in the data object
       for (let i = 1; i <= 25; i++) {
+        
         const key = `f${i}`;
         const value = data[key];
 
 
-        debug.push(data);
+        debug.push(value);
 
         const square = document.querySelector(`#square${i}`);
         if (square) {
@@ -85,7 +86,7 @@ async function updateCirclesFromData() {
         }
       }
   
-      return data,debug;
+      return debug;
   
     } catch (error) {
       console.error('Failed to fetch data:', error);
