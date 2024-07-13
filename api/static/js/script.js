@@ -60,12 +60,13 @@ async function updateCirclesFromData() {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      debug.push(data);
+      
   
       // Iterate through each key in the data object
       for (let i = 1; i <= 25; i++) {
         const key = `f${i}`;
         const value = data[key];
+        debug.push([key, value]);
         const square = document.querySelector(`#square${i}`);
         if (square) {
           // Clear existing circles
