@@ -109,7 +109,7 @@ async function updateCirclesFromData() {
   }
 
 
-document.querySelectorAll('.reset-container').forEach(div => {
+document.querySelectorAll('.reset').forEach(div => {
     div.addEventListener('click', function() {
       this.classList.add('clicked');
       setTimeout(() => {
