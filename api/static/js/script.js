@@ -80,6 +80,9 @@ async function updateCirclesFromData() {
         const mainCircle = squares[i-1].querySelector('.main-circle');
         // Clear existing .small-circle elements
         mainCircle.innerHTML = '';
+        if (value == 0) {
+            mainCircle.innerHTML = '';
+        }
         // Create and append the specified number of .small-circle elements
         for (let i = 0; i < value; i++) {
             const smallCircle = document.createElement('div');
@@ -101,4 +104,4 @@ async function updateCirclesFromData() {
 
 
 
-  setInterval(updateCirclesFromData, 100);
+  setInterval(updateCirclesFromData, 500);
