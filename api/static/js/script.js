@@ -79,20 +79,22 @@ async function updateCirclesFromData() {
         // Select the .main-circle within the specified .square
         const mainCircle = squares[i-1].querySelector('.main-circle');
         // Clear existing .small-circle elements
-        
+
         squares[i-1].innerHTML = '';
 
         if (value != 0) {
             const mainCircle = document.createElement('div');
             mainCircle.className = 'main-circle';
             mainCircle.innerHTML = '';
+
+            for (let i = 0; i < value; i++) {
+                const smallCircle = document.createElement('div');
+                smallCircle.className = 'small-circle';
+                mainCircle.appendChild(smallCircle);
+            }
         }
         // Create and append the specified number of .small-circle elements
-        for (let i = 0; i < value; i++) {
-            const smallCircle = document.createElement('div');
-            smallCircle.className = 'small-circle';
-            mainCircle.appendChild(smallCircle);
-        }
+
         //console.log(i,value,key);
 
       }
