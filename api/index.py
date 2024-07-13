@@ -60,7 +60,7 @@ def get_list():
 def reset_data():
     response = (
         supabase.table("game_data")
-        .update({"name": "Australia"})
+        .update({"data": {"c": "r", "f1": 0}})
         .eq("id", 1)
         .execute()
     )
