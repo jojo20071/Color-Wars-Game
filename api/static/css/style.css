@@ -134,11 +134,11 @@ body, html {
   @keyframes click-feedback {
     from {
       transform: scale(1);
-      background-color: skyblue;
+      background-color: rgb(255, 255, 255);
     }
     to {
-      transform: scale(0.95);
-      background-color: lightcoral;
+      
+      background-color: rgb(226, 75, 75);
     }
   }
   
