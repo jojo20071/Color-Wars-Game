@@ -66,7 +66,11 @@ async function updateCirclesFromData() {
       for (let i = 1; i <= 25; i++) {
         const key = `f${i}`;
         const value = data[key];
-        debug.push(JSON.parse(data[0])[0].data.f1);
+
+        const jsonObject = JSON.parse(data);
+        const f1Value = jsonObject[0].data.f1;
+        debug.push(f1Value);
+
         const square = document.querySelector(`#square${i}`);
         if (square) {
           // Clear existing circles
