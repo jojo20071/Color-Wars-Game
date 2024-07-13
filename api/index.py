@@ -2,6 +2,13 @@ from flask import Flask, send_file, jsonify,render_template
 from flask import request
 import json
 import os
+from supabase import create_client, Client
+
+passupa ="kjJE4iCgzD1XJGfs"
+
+url: str = "https://dugzfjsamotjbsomllxn.supabase.co"
+key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1Z3pmanNhbW90amJzb21sbHhuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA4NzEzODEsImV4cCI6MjAzNjQ0NzM4MX0.ivTb2uot09cjSYhXObJcD4g2S6QTw8ZduMBdlsFD14s"
+supabase: Client = create_client(url, key)
 
 app = Flask(__name__)
 
@@ -51,14 +58,12 @@ def get_list():
 
 @app.route('/reset', methods=['GET'])
 def reset_data():
-    data = default_json
-    if data:
-        data_list = read_data()
-        data_list.append(data)
-        write_data(data_list)
-        return jsonify({"message": "Data reset sucseffuly"}), 201
-    else:
-        return jsonify({"message": "No data provided"}), 400
+    response = (
+        supabase.table("game_data")
+        .update({"name": "Australia"})
+        .eq("id", 1)
+        .execute()
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
