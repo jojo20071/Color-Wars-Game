@@ -80,7 +80,7 @@ async function updateCirclesFromData() {
         }
       }
   
-      return debug;
+      return data;
   
     } catch (error) {
       console.error('Failed to fetch data:', error);
