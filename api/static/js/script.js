@@ -59,7 +59,7 @@ async function updateCirclesFromData() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
+      const data = await response.json()[0].data;
       
   
       // Iterate through each key in the data object
@@ -69,7 +69,7 @@ async function updateCirclesFromData() {
 
         const jsonObject = data[0];
         const f1Value = jsonObject.data.f1;
-        debug.push(f1Value);
+        debug.push(data);
 
         const square = document.querySelector(`#square${i}`);
         if (square) {
