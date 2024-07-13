@@ -40,6 +40,7 @@ body, html {
     justify-content: center; /* Adjusted */
     align-items: center; /* Adjusted */
     flex-wrap: wrap;
+    animation: grow 0.5s ease-out forwards; /* Adjust time as needed */
     
 }
 .small-circle {
@@ -129,3 +130,14 @@ body, html {
     }
     
   }
+
+@keyframes grow {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+    
