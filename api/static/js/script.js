@@ -53,6 +53,7 @@ function resetData() {
 
 
 async function updateCirclesFromData() {
+    console.log('Fetching data...');
     var debug = [];
     try {
       const response = await fetch('https://color-wars-game.vercel.app/list');
