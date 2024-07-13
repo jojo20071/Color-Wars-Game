@@ -22,7 +22,7 @@ function setSmallCirclesCount(squareIndex, count) {
 function addData() {
     const dataInput = "hi"
 
-    fetch('http://127.0.0.1:5000/add', {
+    fetch('https://color-wars-game.vercel.app/add', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
