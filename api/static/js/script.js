@@ -79,9 +79,12 @@ async function updateCirclesFromData() {
         // Select the .main-circle within the specified .square
         const mainCircle = squares[i-1].querySelector('.main-circle');
         // Clear existing .small-circle elements
-        mainCircle.innerHTML = '';
+        
         if (value == 0) {
             squares[i-1].innerHTML = '';
+        }
+        else {
+            mainCircle.innerHTML = '';
         }
         // Create and append the specified number of .small-circle elements
         for (let i = 0; i < value; i++) {
