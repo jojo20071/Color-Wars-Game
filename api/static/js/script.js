@@ -53,12 +53,14 @@ function resetData() {
 
 
 async function updateCirclesFromData() {
+    var debug = [];
     try {
       const response = await fetch('https://color-wars-game.vercel.app/list');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
+      debug.push(data);
   
       // Iterate through each key in the data object
       for (let i = 1; i <= 25; i++) {
@@ -71,19 +73,17 @@ async function updateCirclesFromData() {
           // Add new circles based on the value
           for (let j = 0; j < value; j++) {
             const circle = document.createElement('div');
-            circle.className = 'circle'; // Assuming you have a 'circle' class for styling
+            circle.className = 'circle';
             square.appendChild(circle);
           }
         }
       }
   
-      // Return "success" after all operations complete successfully
-      return "success";
+      return debug;
   
     } catch (error) {
       console.error('Failed to fetch data:', error);
-      // Return or throw an error to indicate failure
-      throw error; // This will allow the caller to catch the error
+      throw error; 
     }
   }
 
