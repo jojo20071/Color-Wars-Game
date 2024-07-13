@@ -54,7 +54,6 @@ function resetData() {
 
 async function updateCirclesFromData() {
     try {
-      // Fetch data from the URL
       const response = await fetch('https://color-wars-game.vercel.app/list');
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -77,10 +76,14 @@ async function updateCirclesFromData() {
           }
         }
       }
-      return "updated circles"
-    
+  
+      // Return "success" after all operations complete successfully
+      return "success";
+  
     } catch (error) {
       console.error('Failed to fetch data:', error);
+      // Return or throw an error to indicate failure
+      throw error; // This will allow the caller to catch the error
     }
   }
 
