@@ -50,7 +50,7 @@ def get_list():
     return jsonify(data_list), 200
 
 @app.route('/reset', methods=['GET'])
-def add_data():
+def reset_data():
     data = default_json
     if data:
         data_list = read_data()
