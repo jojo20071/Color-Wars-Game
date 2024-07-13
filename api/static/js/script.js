@@ -73,20 +73,19 @@ async function updateCirclesFromData() {
 
         debug.push(value);
 
-        const square = document.querySelector(`#square${i}`);
-        if (square) {
-          // Clear existing circles
-          square.innerHTML = '';
-          // Add new circles based on the value
-          for (let j = 0; j < value; j++) {
-            const circle = document.createElement('div');
-            circle.className = 'circle';
-            square.appendChild(circle);
-          }
+        const squares = document.querySelectorAll('.square');
+
+        // Select the .main-circle within the specified .square
+        const mainCircle = squares[i].querySelector('.main-circle');
+        // Clear existing .small-circle elements
+        mainCircle.innerHTML = '';
+        // Create and append the specified number of .small-circle elements
+        for (let i = 0; i < value; i++) {
+            const smallCircle = document.createElement('div');
+            smallCircle.className = 'small-circle';
+            mainCircle.appendChild(smallCircle);
         }
-        else {
-          console.error(`Square not found: #square${i}`);
-        }
+
       }
   
       return debug;
