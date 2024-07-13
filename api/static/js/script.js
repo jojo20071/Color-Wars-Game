@@ -84,6 +84,8 @@ async function updateCirclesFromData() {
             squares[i-1].innerHTML = '';
         }
         else {
+            const mainCircle = document.createElement('div');
+            mainCircle.className = 'main-circle';
             mainCircle.innerHTML = '';
         }
         // Create and append the specified number of .small-circle elements
