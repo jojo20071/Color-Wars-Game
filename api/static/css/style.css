@@ -133,7 +133,7 @@ body, html {
 
   @keyframes click-feedback {
     from {
-      transform: scale(1);
+
       background-color: rgb(255, 255, 255);
     }
     to {
