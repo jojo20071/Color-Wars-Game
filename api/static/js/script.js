@@ -142,11 +142,22 @@ document.getElementById('main-circle').addEventListener('click', function(event)
 });
 
 
+function verClick(clickedSquare){
+  const key = `f${clickedSquare}`;
+  const newData  = data;
+  newData[key] = data[key] + 1;
+  addData(newData);
+
+
+
+}
+
+
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
   if (data["c"] == "r") {
-    addData({"c": "r"});
+    verClick(squareId);
   }
 
 
