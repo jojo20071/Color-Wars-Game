@@ -173,6 +173,57 @@ document.getElementById('main-circle').addEventListener('click', function(event)
   handleSquareClick(event);
 });
 
+function compute4(){
+  const key = `f${1}`;
+  const value = data[key][0];
+  if (value >= 4) {
+    const key1 = `f${2}`;
+    const key2 = `f${6}`;
+    const key3 = `f${7}`;
+    const newData  = data;
+    newData[key1][0] = data[key1][0] + 1;
+    newData[key2][0] = data[key2][0] + 1;
+    newData[key3][0] = data[key3][0] + 1;
+    newData[key][0] = data[key][0] - 3;
+    addData(newData);
+  }
+  const key4 = `f${5}`;
+  const value4 = data[key4][0];
+  if (value4 >= 4) {
+    const key5 = `f${4}`;
+    const key6 = `f${10}`;
+    const key7 = `f${9}`;
+    const newData  = data;
+    newData[key5][0] = data[key5][0] + 1;
+    newData[key6][0] = data[key6][0] + 1;
+    newData[key7][0] = data[key7][0] + 1;
+    newData[key4][0] = data[key4][0] - 3;
+    addData(newData);
+  }
+  const key8 = `f${21}`;
+  const value8 = data[key8][0];
+  if (value8 >= 4) {
+    const key9 = `f${16}`;
+    const key10 = `f${17}`;
+    const key11 = `f${22}`;
+    const newData  = data;
+    newData[key9][0] = data[key9][0] + 1;
+    newData[key10][0] = data[key10][0] + 1;
+    newData[key11][0] = data[key11][0] + 1;
+    newData[key8][0] = data[key8][0] - 3;
+    addData(newData);
+  }
+  const key12 = `f${25}`;
+  const value12 = data[key12][0];
+  if (value12 >= 4) {
+    const key13 = `f${20}`;
+    const key14 = `f${19}`;
+    const key15 = `f${24}`;
+
+
+
+}
+
 
 function verClick(clickedSquare){
   const key = `f${clickedSquare}`;
@@ -184,14 +235,28 @@ function verClick(clickedSquare){
   else{
     newData[key][1] = 1;
   }
-  console.log(newData[key]);
-  if (data["c"] == "r") {
-    newData["c"] = "b";
+  
+  for (let i = 1; i <= 25; i++) {
+    const key = `f${i}`;
+    const value = data[key][0];
+    if (value => 4) {
+      newData["computing"] = 1;
+      break;
   }
-  else{
-    newData["c"] = "r";
+  compute4();
+  if (newData["computing"] == 1) {
+    if (data["c"] == "r") {
+      newData["c"] = "b";
+    }
+    else{
+      newData["c"] = "r";
+    }
   }
+
+
+
   addData(newData);
+}
 }
 
 
@@ -199,12 +264,11 @@ function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
   console.log(localStorage.getItem("color")[2]);
-  if (data["c"] == localStorage.getItem("color")[2]){
+  if (data["c"] == localStorage.getItem("color")[2] && data["computing"] == 0) {
     if (data[`f${squareId}`][0] == 0) {
       verClick(squareId);
     }
     else if (data[`f${squareId}`][1] == localStorage.getItem("color")[0]){
-        console.log("same color"+data[`f${squareId}`][1]+"----"+localStorage.getItem("color")[0]);
         verClick(squareId);
       }
     }
