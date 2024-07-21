@@ -130,6 +130,6 @@ document.querySelectorAll('.square').forEach(square => {
 
 
 function handleSquareClick(event) {
-  const squareId = event.currentTarget.id;
+  const squareId = parseInt(event.currentTarget.id);
   console.log(squareId);
 }
