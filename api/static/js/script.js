@@ -1,3 +1,24 @@
+localStorage.setItem("color", [0,"r"]);
+function changeColor() {
+    var color = localStorage.getItem("color");
+    if (color[1] == "r") {
+        localStorage.setItem("color", [1,"b"]);}
+    else{
+        localStorage.setItem("color", [0,"r"]);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 function setSmallCirclesCount(squareIndex, count) {
     // Find all .square elements
     const squares = document.querySelectorAll('.square');
@@ -178,6 +199,9 @@ function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
   if (data["c"] == "r" || data["c"] == "b") {
+    if (data[`f${squareId}`][1] == localStorage.getItem("color")[0]) {
+      verClick(squareId);
+    }
     verClick(squareId);
   }
 
