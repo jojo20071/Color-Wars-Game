@@ -239,7 +239,7 @@ function verClick(clickedSquare){
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
     const value = data[key][0];
-    if (value => 4) {
+    if (value == 4) {
       newData["computing"] = 1;
       break;
   }
