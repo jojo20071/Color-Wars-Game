@@ -63,7 +63,7 @@ async function getData() {
 }
 
 
-
+var data;
 
 async function updateCirclesFromData() {
     var debug = [];
@@ -74,7 +74,7 @@ async function updateCirclesFromData() {
       }
       const apiData = await response.json();
       const jsonObject = apiData[0];
-      var data = jsonObject.data;
+      data = jsonObject.data;
       
   
       // Iterate through each key in the data object
@@ -147,4 +147,14 @@ function handleSquareClick(event) {
   console.log(squareId,getData().then(data => console.log(data)));
   
   
+}
+
+function func1() {
+  var data = "hi";
+
+}
+
+function func2() {
+  console.log(data);
+
 }
