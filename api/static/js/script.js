@@ -19,8 +19,8 @@ function setSmallCirclesCount(squareIndex, count) {
 }
 
 
-function addData() {
-    const dataInput = "hi"
+function addData(input) {
+    const dataInput = input
 
     fetch('https://color-wars-game.vercel.app/add', {
         method: 'POST',
@@ -30,11 +30,7 @@ function addData() {
         body: JSON.stringify({ data: dataInput })
     })
     .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        document.getElementById('dataInput').value = '';
-    })
-    .catch(error => console.error('Error:', error));
+
 }
 
 function resetData() {
@@ -64,7 +60,6 @@ async function getData() {
 
 
 var data;
-
 async function updateCirclesFromData() {
     var debug = [];
     try {
@@ -137,24 +132,20 @@ setInterval(updateCirclesFromData, 500);
 document.querySelectorAll('.square').forEach(square => {
   square.addEventListener('click', function(event) {
       handleSquareClick(event);
-      console.log(data);
+
   });
 });
 
 
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
-  console.log(squareId,getData().then(data => console.log(data)));
+  console.log(squareId,data);
+  if (data[c] == "r") {
+    addData({f: squareId, c: "r"});
+  }
+
+
   
   
 }
 
-function func1() {
-  var data = "hi";
-
-}
-
-function func2() {
-  console.log(data);
-
-}
