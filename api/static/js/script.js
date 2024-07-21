@@ -203,6 +203,7 @@ function handleSquareClick(event) {
       verClick(squareId);
     }
     else if (data[`f${squareId}`][1] == localStorage.getItem("color")[0]){
+        console.log("same color"+data[`f${squareId}`][1]+"----"+localStorage.getItem("color")[0]);
         verClick(squareId);
       }
     }
