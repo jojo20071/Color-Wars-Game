@@ -51,9 +51,8 @@ function resetData() {
 }
 
 
-
+var data;
 async function updateCirclesFromData() {
-    console.log('Fetching data...');
     var debug = [];
     try {
       const response = await fetch('https://color-wars-game.vercel.app/list');
@@ -62,7 +61,7 @@ async function updateCirclesFromData() {
       }
       const apiData = await response.json();
       const jsonObject = apiData[0];
-      const data = jsonObject.data;
+      var data = jsonObject.data;
       
   
       // Iterate through each key in the data object
@@ -125,6 +124,7 @@ document.querySelectorAll('.reset').forEach(div => {
 document.querySelectorAll('.square').forEach(square => {
   square.addEventListener('click', function(event) {
       handleSquareClick(event);
+      console.log(data);
   });
 });
 
@@ -132,4 +132,5 @@ document.querySelectorAll('.square').forEach(square => {
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId);
+  
 }
