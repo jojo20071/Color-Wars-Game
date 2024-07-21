@@ -136,6 +136,10 @@ document.querySelectorAll('.square').forEach(square => {
   });
 });
 
+document.getElementById('main-circle').addEventListener('click', function(event) {
+  handleSquareClick(event);
+});
+
 
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
