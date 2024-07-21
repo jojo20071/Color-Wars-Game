@@ -83,7 +83,7 @@ def blue():
         
         <script>
             // JavaScript to change the local storage variable "color"
-            localStorage.setItem('color', [1,b]); // Change 'newColorValue' as needed
+            localStorage.setItem('color', [1,"b"]); // Change 'newColorValue' as needed
             document.body.innerHTML += '<p>Color changed in local storage. Redirecting in 1 second...</p>';
             
             // Wait for 1 second before redirecting
@@ -111,7 +111,7 @@ def red():
         
         <script>
             // JavaScript to change the local storage variable "color"
-            localStorage.setItem('color', [0,r]); // Change 'newColorValue' as needed
+            localStorage.setItem('color', [0,"r"]); // Change 'newColorValue' as needed
             document.body.innerHTML += '<p>Color changed in local storage. Redirecting in 1 second...</p>';
             
             // Wait for 1 second before redirecting
