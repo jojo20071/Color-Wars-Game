@@ -50,8 +50,21 @@ function resetData() {
     .then(response => response.json())
 }
 
+async function getData() {
+  const response = await fetch('https://color-wars-game.vercel.app/list');
+  if (!response.ok) {
+      throw new Error('Network response was not ok');
+      }
+  const apiData = await response.json();
+  const jsonObject = apiData[0];
+  const data = jsonObject.data;
+  return data;
 
-var data;
+}
+
+
+
+
 async function updateCirclesFromData() {
     var debug = [];
     try {
@@ -117,7 +130,7 @@ document.querySelectorAll('.reset').forEach(div => {
     });
 });
 
-  setInterval(updateCirclesFromData, 500);
+setInterval(updateCirclesFromData, 500);
 
 //------------click mech -----------
 
@@ -131,6 +144,7 @@ document.querySelectorAll('.square').forEach(square => {
 
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
-  console.log(squareId);
+  console.log(squareId,data());
+  
   
 }
