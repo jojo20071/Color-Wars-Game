@@ -1,7 +1,7 @@
 localStorage.setItem("color", [0,"r"]);
 function changeColor() {
     var color = localStorage.getItem("color");
-    if (color[1] == "r") {
+    if (color[2] == "r") {
         localStorage.setItem("color", [1,"b"]);}
     else{
         localStorage.setItem("color", [0,"r"]);
