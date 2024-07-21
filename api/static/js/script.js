@@ -147,6 +147,7 @@ function verClick(clickedSquare){
   const newData  = data;
   newData[key] = data[key] + 1;
   addData(newData);
+  console.log(newData);
 
 
 
