@@ -199,8 +199,12 @@ function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
   if (data["c"] == "r" || data["c"] == "b") {
-    if (data[`f${squareId}`][1] == localStorage.getItem("color")[0]) {
+    if (data[`f${squareId}`][0] == 0) {
       verClick(squareId);
+    }
+    else if (data[`f${squareId}`][1] == localStorage.getItem("color")[0]){
+        verClick(squareId);
+      }
     }
     
   }
