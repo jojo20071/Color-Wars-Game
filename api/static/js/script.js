@@ -192,8 +192,8 @@ function verClick(clickedSquare){
     const value = data[key][0];
     if (value == 4) {
       newData["computing"] = 1;
-      break;
-  }
+      break;}
+    }
   //compute4();
   if (newData["computing"] == 0) {
     if (data["c"] == "r") {
@@ -207,7 +207,7 @@ function verClick(clickedSquare){
 
 
   addData(newData);
- }
+ 
 }
 
 
