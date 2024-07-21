@@ -207,10 +207,10 @@ function handleSquareClick(event) {
       }
     }
     
-  }
-
-
-  
-  
 }
+
+
+  
+  
+
 
