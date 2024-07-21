@@ -140,7 +140,7 @@ document.querySelectorAll('.square').forEach(square => {
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
-  if (data[c] == "r") {
+  if (data["c"] == "r") {
     addData({"c": "r"});
   }
 
