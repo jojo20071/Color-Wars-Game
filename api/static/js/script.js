@@ -198,7 +198,7 @@ function verClick(clickedSquare){
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
-  if (data["c"] == "r" || data["c"] == "b") {
+  if (data["c"] == localStorage.getItem("color")[1]){
     if (data[`f${squareId}`][0] == 0) {
       verClick(squareId);
     }
