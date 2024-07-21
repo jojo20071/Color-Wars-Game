@@ -174,11 +174,17 @@ document.getElementById('main-circle').addEventListener('click', function(event)
 });
 
 
+var newData;
+
+function compute4() {
+  console.log("computing");
+  newData["computing"] = 0;
+}
 
 
 function verClick(clickedSquare){
   const key = `f${clickedSquare}`;
-  const newData  = data;
+  newData  = data;
   newData[key][0] = data[key][0] + 1;
   if (data["c"] == "r") {
     newData[key][1] = 0;
@@ -194,7 +200,10 @@ function verClick(clickedSquare){
       newData["computing"] = 1;
       break;}
     }
-  //compute4();
+  if (newData["computing"] == 1) {
+    compute4();
+  }
+
   if (newData["computing"] == 0) {
     if (data["c"] == "r") {
       newData["c"] = "b";
