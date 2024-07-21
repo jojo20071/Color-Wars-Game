@@ -245,7 +245,7 @@ function verClick(clickedSquare){
       break;
   }
   compute4();
-  if (newData["computing"] == 1) {
+  if (newData["computing"] == 0) {
     if (data["c"] == "r") {
       newData["c"] = "b";
     }
