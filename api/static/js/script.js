@@ -223,6 +223,7 @@ function compute4(){
 
 
 }
+}
 
 
 function verClick(clickedSquare){
@@ -256,7 +257,7 @@ function verClick(clickedSquare){
 
 
   addData(newData);
-}
+ }
 }
 
 
