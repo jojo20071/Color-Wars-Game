@@ -85,7 +85,7 @@ async function updateCirclesFromData() {
       for (let i = 1; i <= 25; i++) {
         
         const key = `f${i}`;
-        const value = data[key];
+        const value = data[key][0];
 
 
         debug.push(value);
@@ -153,7 +153,7 @@ document.getElementById('main-circle').addEventListener('click', function(event)
 function verClick(clickedSquare){
   const key = `f${clickedSquare}`;
   const newData  = data;
-  newData[key] = data[key] + 1;
+  newData[key][0] = data[key][0] + 1;
   if (data["c"] == "r") {
     newData["c"] = "b";
   }
