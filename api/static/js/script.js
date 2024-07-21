@@ -70,6 +70,13 @@ async function updateCirclesFromData() {
       const apiData = await response.json();
       const jsonObject = apiData[0];
       data = jsonObject.data;
+
+      if (data["c"] == "r") {
+        document.getElementById("body").style.backgroundColor = "#de8f70";
+      }
+      else{
+        document.getElementById("body").style.backgroundColor = "#2d8bd8";
+      }
       
   
       // Iterate through each key in the data object
@@ -91,7 +98,6 @@ async function updateCirclesFromData() {
 
         if (value != 0) {
             const mainCircle = document.createElement('div');
-            console.log("mainCircle added");
             mainCircle.className = 'main-circle';
             squares[i-1].appendChild(mainCircle);
             mainCircle.innerHTML = '';
@@ -146,6 +152,12 @@ function verClick(clickedSquare){
   const key = `f${clickedSquare}`;
   const newData  = data;
   newData[key] = data[key] + 1;
+  if (data["c"] == "r") {
+    newData["c"] = "b";
+  }
+  else{
+    newData["c"] = "r";
+  }
   addData(newData);
 }
 
@@ -153,7 +165,7 @@ function verClick(clickedSquare){
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
   console.log(squareId,data);
-  if (data["c"] == "r") {
+  if (data["c"] == "r" || data["c"] == "b") {
     verClick(squareId);
   }
 
