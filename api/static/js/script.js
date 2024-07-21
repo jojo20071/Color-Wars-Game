@@ -202,7 +202,7 @@ function handleSquareClick(event) {
     if (data[`f${squareId}`][1] == localStorage.getItem("color")[0]) {
       verClick(squareId);
     }
-    verClick(squareId);
+    
   }
 
 
