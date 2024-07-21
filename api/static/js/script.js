@@ -20,7 +20,7 @@ function setSmallCirclesCount(squareIndex, count) {
 
 
 function addData(input) {
-    const dataInput = JSON.stringify(input);
+    const dataInput = input;
 
     fetch('https://color-wars-game.vercel.app/add', {
         method: 'POST',
@@ -147,10 +147,6 @@ function verClick(clickedSquare){
   const newData  = data;
   newData[key] = data[key] + 1;
   addData(newData);
-  console.log(newData);
-
-
-
 }
 
 
