@@ -1,4 +1,4 @@
-localStorage.setItem("color", [0,"r"]);
+
 function changeColor() {
     var color = localStorage.getItem("color");
     if (color[2] == "r") {
