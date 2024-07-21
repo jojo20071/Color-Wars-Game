@@ -101,6 +101,9 @@ async function updateCirclesFromData() {
         if (value != 0) {
             const mainCircle = document.createElement('div');
             mainCircle.className = 'main-circle';
+            if (data[key][1] == 1) {
+              mainCircle.style.backgroundColor = "#00c2ea";
+            }
             squares[i-1].appendChild(mainCircle);
             mainCircle.innerHTML = '';
 
@@ -154,6 +157,13 @@ function verClick(clickedSquare){
   const key = `f${clickedSquare}`;
   const newData  = data;
   newData[key][0] = data[key][0] + 1;
+  if (data["c"] == "r") {
+    newData[key][1] = 0;
+  }
+  else{
+    newData[key][1] = 1;
+  }
+  
   if (data["c"] == "r") {
     newData["c"] = "b";
   }
