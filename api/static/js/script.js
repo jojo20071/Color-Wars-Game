@@ -120,18 +120,16 @@ document.querySelectorAll('.reset').forEach(div => {
 
   setInterval(updateCirclesFromData, 500);
 
-
+//------------click mech -----------
 
 document.querySelectorAll('.square').forEach(square => {
   square.addEventListener('click', function(event) {
-      // Call the function and pass the event
       handleSquareClick(event);
   });
 });
 
 
 function handleSquareClick(event) {
-  // Access the clicked square's ID
   const squareId = event.currentTarget.id;
-  console.log('Clicked square ID:', squareId);
+  console.log(squareId);
 }
