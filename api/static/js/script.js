@@ -184,7 +184,7 @@ function verClick(clickedSquare){
   else{
     newData[key][1] = 1;
   }
-  
+  console.log(newData[key]);
   if (data["c"] == "r") {
     newData["c"] = "b";
   }
