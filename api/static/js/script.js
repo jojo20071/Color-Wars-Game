@@ -75,7 +75,7 @@ async function updateCirclesFromData() {
         document.getElementById("body").style.backgroundColor = "#de8f70";
       }
       else{
-        document.getElementById("body").style.backgroundColor = "#2d8bd8";
+        document.getElementById("body").style.backgroundColor = "rgb(92 171 209)";
       }
       
   
