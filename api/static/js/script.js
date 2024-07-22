@@ -222,7 +222,7 @@ function compute4(fkey,i) {
     else{
       newData[key][1] = 1;
     }
-
+  }
   
 
   newData["computing"] = 0;
