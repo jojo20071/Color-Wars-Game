@@ -181,8 +181,50 @@ document.getElementById('main-circle').addEventListener('click', function(event)
 
 var newData;
 
-function compute4() {
-  console.log("computing");
+function compute4(fkey,i) {
+  console.log("computing for "+fkey);
+  if ([6,11,16,21,26].includes(i+1)==false) {
+    const key = `f${i+1}`;
+    newData[key][0] = data[key][0] + 1;
+    if (data["c"] == "r") {
+      newData[key][1] = 0;
+    }
+    else{
+      newData[key][1] = 1;
+    }
+  }
+  if ([5,10,15,20,25].includes(i-1)==false) {
+    const key = `f${i-1}`;
+    newData[key][0] = data[key][0] + 1;
+    if (data["c"] == "r") {
+      newData[key][1] = 0;
+    }
+    else{
+      newData[key][1] = 1;
+    }
+  }
+  if ([1,2,3,4,5].includes(i)==false) {
+    const key = `f${i-5}`;
+    newData[key][0] = data[key][0] + 1;
+    if (data["c"] == "r") {
+      newData[key][1] = 0;
+    }
+    else{
+      newData[key][1] = 1;
+    }
+  }
+  if ([21,22,23,24,25].includes(i)==false) {
+    const key = `f${i+5}`;
+    newData[key][0] = data[key][0] + 1;
+    if (data["c"] == "r") {
+      newData[key][1] = 0;
+    }
+    else{
+      newData[key][1] = 1;
+    }
+
+  
+
   newData["computing"] = 0;
 }
 
@@ -206,7 +248,7 @@ function verClick(clickedSquare){
       break;}
     }
   if (newData["computing"] == 1) {
-    compute4();
+    compute4(key,i);
   }
 
   if (newData["computing"] == 0) {
