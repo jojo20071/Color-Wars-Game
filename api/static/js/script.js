@@ -226,7 +226,7 @@ function compute4(fkey,i) {
   //main circle to 0
   const key = `f${i}`;
   newData[key][0] = 0;
-  
+
   newData["computing"] = 0;
   addData(newData);
   
@@ -235,16 +235,17 @@ function compute4(fkey,i) {
     const key = `f${i}`;
     const value = data[key][0];
     if (value >= 4) {
-      console.log("4 found ojn " + key);
+      console.log("4 found on " + key);
       newData["computing"] = 1;
       var computingFor = i;
       break;}}
   if (newData["computing"] == 1) {
+    console.log("4 was found so noe function executed again");
     compute4(`f${computingFor}`,computingFor);
     
   }
-
-
+  console.log("no more 4s, final push");
+  addData(newData);
   
     
   
