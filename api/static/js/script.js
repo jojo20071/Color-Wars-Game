@@ -31,7 +31,7 @@ function setSmallCirclesCount(squareIndex, count) {
     const mainCircle = squares[squareIndex].querySelector('.main-circle');
     // Clear existing .small-circle elements
     mainCircle.innerHTML = '';
-    // Create and append the specified number of .small-circle elements
+    // Create and append the specified number of .small-circle element
     for (let i = 0; i < count; i++) {
         const smallCircle = document.createElement('div');
         smallCircle.className = 'small-circle';
