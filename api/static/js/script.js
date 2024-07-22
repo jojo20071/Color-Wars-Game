@@ -236,12 +236,10 @@ function compute4(fkey,i) {
       console.log("4 found ojn " + key);
       newData["computing"] = 1;
       var computingFor = i;
-      break;}
-    else{
-      newData["computing"] = 0;
-    }
+      break;}}
   if (newData["computing"] == 1) {
     compute4(`f${computingFor}`,computingFor);
+    
   }
   else{
     newData["computing"] = 0;
