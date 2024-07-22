@@ -9,8 +9,13 @@ function changeColor() {
   }
 
 
+function sred() {
+    localStorage.setItem("color", [0,"r"]);
+}
 
-
+function sblue() {
+  localStorage.setItem("color", [1,"b"]);
+}
 
 
 
@@ -196,7 +201,7 @@ function verClick(clickedSquare){
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
     const value = data[key][0];
-    if (value == 4) {
+    if (value >= 4) {
       newData["computing"] = 1;
       break;}
     }
