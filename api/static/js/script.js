@@ -227,15 +227,18 @@ function compute4(fkey,i) {
   const key = `f${i}`;
   newData[key][0] = 0;
 
-
+  addData(newData);
   console.log("cumputing done, checking for 4...");
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
     const value = data[key][0];
     if (value >= 4) {
+      console.log("4 found ojn " + key);
       newData["computing"] = 1;
       var computingFor = i;
       break;}
+    else{
+      newData["computing"] = 0;
     }
   if (newData["computing"] == 1) {
     compute4(`f${computingFor}`,computingFor);
