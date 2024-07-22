@@ -228,6 +228,7 @@ function compute4(fkey,i) {
   newData[key][0] = 0;
 
   addData(newData);
+  newData["computing"] = 0;
   console.log("cumputing done, checking for 4...");
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
@@ -241,15 +242,13 @@ function compute4(fkey,i) {
     compute4(`f${computingFor}`,computingFor);
     
   }
-  else{
-    newData["computing"] = 0;
-  }
+
 
   
     
   
 
-  newData["computing"] = 0;
+
 }
 
 
