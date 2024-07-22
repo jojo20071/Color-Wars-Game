@@ -182,7 +182,7 @@ document.getElementById('main-circle').addEventListener('click', function(event)
 var newData;
 
 function compute4(fkey,i) {
-  console.log("computing for "+fkey);
+  console.log("computing for "+fkey+" i=  "+i);
   if ([6,11,16,21,26].includes(i+1)==false) {
     const key = `f${i+1}`;
     newData[key][0] = data[key][0] + 1;
@@ -193,7 +193,7 @@ function compute4(fkey,i) {
       newData[key][1] = 1;
     }
   }
-  if ([5,10,15,20,25].includes(i-1)==false) {
+  if ([0,5,10,15,20,25].includes(i-1)==false) {
     const key = `f${i-1}`;
     newData[key][0] = data[key][0] + 1;
     if (data["c"] == "r") {
