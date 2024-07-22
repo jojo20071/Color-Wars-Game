@@ -245,10 +245,11 @@ function verClick(clickedSquare){
     const value = data[key][0];
     if (value >= 4) {
       newData["computing"] = 1;
+      var computingFor = i;
       break;}
     }
   if (newData["computing"] == 1) {
-    compute4(key,i);
+    compute4(key,computingFor);
   }
 
   if (newData["computing"] == 0) {
