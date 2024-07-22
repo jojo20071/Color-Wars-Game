@@ -223,6 +223,24 @@ function compute4(fkey,i) {
       newData[key][1] = 1;
     }
   }
+  console.log("cumputing done, checking for 4...");
+  for (let i = 1; i <= 25; i++) {
+    const key = `f${i}`;
+    const value = data[key][0];
+    if (value >= 4) {
+      newData["computing"] = 1;
+      var computingFor = i;
+      break;}
+    }
+  if (newData["computing"] == 1) {
+    compute4(`f${computingFor}`,computingFor);
+  }
+  else{
+    newData["computing"] = 0;
+  }
+
+  
+    
   
 
   newData["computing"] = 0;
