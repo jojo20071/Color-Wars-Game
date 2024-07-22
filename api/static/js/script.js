@@ -223,6 +223,11 @@ function compute4(fkey,i) {
       newData[key][1] = 1;
     }
   }
+  //main circle to 0
+  const key = `f${i}`;
+  newData[key][0] = 0;
+
+
   console.log("cumputing done, checking for 4...");
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
