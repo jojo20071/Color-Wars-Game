@@ -150,7 +150,7 @@ document.getElementById('main-circle').addEventListener('click', function(event)
 var newData;
 
 function compute4(fkey,i) {
-  console.log("computing for "+fkey+" i=  "+i);
+  console.log("comput4 for "+fkey+" i=  "+i);
   if ([6,11,16,21,26].includes(i+1)==false) {
     const key = `f${i+1}`;
     newData[key][0] = data[key][0] + 1;
@@ -191,14 +191,16 @@ function compute4(fkey,i) {
       newData[key][1] = 1;
     }
   }
+  
   //main circle to 0
   const key = `f${i}`;
   newData[key][0] = 0;
 
   newData["computing"] = 0;
   addData(newData);
+  console.log("plus calc done and data pushed");
   
-  console.log("cumputing done, checking for 4...");
+  console.log("now checking for 4...");
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
     const value = data[key][0];
@@ -208,7 +210,7 @@ function compute4(fkey,i) {
       var computingFor = i;
       break;}}
   if (newData["computing"] == 1) {
-    console.log("4 was found so noe function executed again");
+    console.log("4 was found so compute 4 executed again");
     compute4(`f${computingFor}`,computingFor);
     
   }
@@ -232,6 +234,8 @@ function verClick(clickedSquare){
   else{
     newData[key][1] = 1;
   }
+
+  console.log("incremwnted "+key+" to "+newData[key][0]+" now checking if its 4 now");
   
   for (let i = 1; i <= 25; i++) {
     const key = `f${i}`;
@@ -242,10 +246,12 @@ function verClick(clickedSquare){
       break;}
     }
   if (newData["computing"] == 1) {
+    console.log("its at 4 yey, now executing compute4----------------------");
     compute4(key,computingFor);
   }
 
   if (newData["computing"] == 0) {
+    console.log("not at 4 yet, next players turn now");
     if (data["c"] == "r") {
       newData["c"] = "b";
     }
@@ -263,8 +269,7 @@ function verClick(clickedSquare){
 
 function handleSquareClick(event) {
   const squareId = parseInt(event.currentTarget.id);
-  console.log(squareId,data);
-  console.log(localStorage.getItem("color")[2]);
+  console.log("Clicked:  "+(squareId,data));
   if (data["c"] == localStorage.getItem("color")[2] && data["computing"] == 0) {
     if (data[`f${squareId}`][0] == 0) {
       verClick(squareId);
@@ -273,6 +278,9 @@ function handleSquareClick(event) {
         verClick(squareId);
       }
     }
+  else{
+    console.log("not your turn");
+  }
     
 }
 
