@@ -10,7 +10,14 @@ function changeColor() {
     }
   }
 
-
+function sred() {
+    localStorage.setItem("color", [0,"r"]);
+    console.log("color set to red");
+}
+function sblue() {
+    localStorage.setItem("color", [1,"b"]);
+    console.log("color set to blue");
+}
 
 
 
