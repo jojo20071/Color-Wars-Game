@@ -1,48 +1,17 @@
-
 function changeColor() {
     var color = localStorage.getItem("color");
     if (color[2] == "r") {
-        localStorage.setItem("color", [1,"b"]);}
+        localStorage.setItem("color", [1,"b"]);
+        console.log("color changed to blue");
+      }
     else{
         localStorage.setItem("color", [0,"r"]);
+        console.log("color changed to red");
     }
   }
 
 
-function sred() {
-    localStorage.setItem("color", [0,"r"]);
-}
 
-function sblue() {
-  localStorage.setItem("color", [1,"b"]);
-}
-
-
-
-
-
-
-
-
-function setSmallCirclesCount(squareIndex, count) {
-    // Find all .square elements
-    const squares = document.querySelectorAll('.square');
-    // Check if the specified index is within bounds
-    if (squareIndex < 0 || squareIndex >= squares.length) {
-        console.error('Square index out of bounds');
-        return;
-    }
-    // Select the .main-circle within the specified .square
-    const mainCircle = squares[squareIndex].querySelector('.main-circle');
-    // Clear existing .small-circle elements
-    mainCircle.innerHTML = '';
-    // Create and append the specified number of .small-circle element
-    for (let i = 0; i < count; i++) {
-        const smallCircle = document.createElement('div');
-        smallCircle.className = 'small-circle';
-        mainCircle.appendChild(smallCircle);
-    }
-}
 
 
 function addData(input) {
@@ -58,10 +27,10 @@ function addData(input) {
     .then(response => response.json())
 
 }
-
 function resetData() {
 
 
+    console.log("resetting data");
     fetch('https://color-wars-game.vercel.app/reset', {
         method: 'GET',
         headers: {
@@ -71,7 +40,6 @@ function resetData() {
     })
     .then(response => response.json())
 }
-
 async function getData() {
   const response = await fetch('https://color-wars-game.vercel.app/list');
   if (!response.ok) {
