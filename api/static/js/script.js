@@ -278,7 +278,7 @@ function verClick(clickedSquare){
       addData(newData);
     }
   }
-  addData(newData);
+ 
  
 }
 
