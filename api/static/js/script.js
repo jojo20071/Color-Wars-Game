@@ -21,22 +21,24 @@ function sblue() {
 
 
 
-async function addData(input,line) {
-    console.log("---adding data start---  "+line);
-    const dataInput = input;
+async function addData(input, line) {
+  console.log("---adding data start---  " + line);
+  const dataInput = input;
 
-    fetch('https://color-wars-game.vercel.app/add', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ data: dataInput })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("---add data end --- "+line);
-    })
+  try {
+      const response = await fetch('https://color-wars-game.vercel.app/add', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ data: dataInput })
+      });
 
+      const data = await response.json();
+      console.log("---add data end --- " + line);
+  } catch (error) {
+      console.error("Error adding data:", error);
+  }
 }
 function resetData() {
 
@@ -209,9 +211,8 @@ function compute4(fkey,i) {
 
   newData["computing"] = 0;
   
-  (async () => {
-    await addData(newData,211);
-    console.log("code continues");
+  //addData(newData,211);
+
   
   console.log("plus calc done and data pushed");
   
@@ -230,8 +231,8 @@ function compute4(fkey,i) {
     
   }
   console.log("no more 4s, final push");
-  addData(newData,229);
-  })(); 
+  //addData(newData,229);
+
   
     
   
