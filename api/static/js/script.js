@@ -21,8 +21,8 @@ function sblue() {
 
 
 
-function addData(input) {
-    console.log("---adding data start---");
+function addData(input,line) {
+    console.log("---adding data start---  "+line);
     const dataInput = input;
 
     fetch('https://color-wars-game.vercel.app/add', {
@@ -34,7 +34,7 @@ function addData(input) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log("---add data end---");
+        console.log("---add data end --- "+line);
     })
 
 }
@@ -208,7 +208,7 @@ function compute4(fkey,i) {
   newData[key][0] = 0;
 
   newData["computing"] = 0;
-  addData(newData);
+  addData(newData,211);
   console.log("plus calc done and data pushed");
   
   console.log("now checking for 4...");
@@ -226,7 +226,7 @@ function compute4(fkey,i) {
     
   }
   console.log("no more 4s, final push");
-  addData(newData);
+  addData(newData,229);
   
     
   
@@ -269,13 +269,13 @@ function verClick(clickedSquare){
       newData["c"] = "b";
       console.log("color changed to blue");
       console.log(newData);
-      addData(newData);
+      addData(newData,272);
     }
     else{
       newData["c"] = "r";
       console.log("color changed to red");
       console.log(newData);
-      addData(newData);
+      addData(newData,278);
     }
   }
  
