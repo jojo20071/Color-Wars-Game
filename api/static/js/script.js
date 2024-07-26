@@ -22,6 +22,7 @@ function sblue() {
 
 
 function addData(input) {
+    console.log("---adding data start---");
     const dataInput = input;
 
     fetch('https://color-wars-game.vercel.app/add', {
@@ -32,6 +33,9 @@ function addData(input) {
         body: JSON.stringify({ data: dataInput })
     })
     .then(response => response.json())
+    .then(data => {
+        console.log("---add data end---");
+    })
 
 }
 function resetData() {
