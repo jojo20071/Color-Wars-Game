@@ -21,7 +21,7 @@ function sblue() {
 
 
 
-function addData(input,line) {
+async function addData(input,line) {
     console.log("---adding data start---  "+line);
     const dataInput = input;
 
