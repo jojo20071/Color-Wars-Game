@@ -264,15 +264,14 @@ function verClick(clickedSquare){
     if (data["c"] == "r") {
       newData["c"] = "b";
       console.log("color changed to blue");
+      addData(newData);
     }
     else{
       newData["c"] = "r";
       console.log("color changed to red");
+      addData(newData);
     }
   }
-
-
-
   addData(newData);
  
 }
