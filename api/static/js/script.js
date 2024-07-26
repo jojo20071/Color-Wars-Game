@@ -259,11 +259,15 @@ function verClick(clickedSquare){
 
   if (newData["computing"] == 0) {
     console.log("next players turn now");
+    console.log("starting turn debugging:");
+    console.log("current color: "+data["c"]);
     if (data["c"] == "r") {
       newData["c"] = "b";
+      console.log("color changed to blue");
     }
     else{
       newData["c"] = "r";
+      console.log("color changed to red");
     }
   }
 
