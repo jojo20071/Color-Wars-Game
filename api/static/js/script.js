@@ -154,10 +154,20 @@ document.querySelectorAll('.square').forEach(square => {
 
   });
 });
+document.querySelectorAll('.main-circle').forEach(square => {
+  square.addEventListener('click', function(event) {
+      handleSquareClick(event);
 
-document.getElementById('main-circle').addEventListener('click', function(event) {
-  handleSquareClick(event);
+  });
 });
+document.querySelectorAll('.small-circle').forEach(square => {
+  square.addEventListener('click', function(event) {
+      handleSquareClick(event);
+
+  });
+});
+
+
 
 
 var newData;
