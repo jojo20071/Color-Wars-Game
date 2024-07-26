@@ -208,7 +208,11 @@ function compute4(fkey,i) {
   newData[key][0] = 0;
 
   newData["computing"] = 0;
-  addData(newData,211);
+  
+  (async () => {
+    await addData(newData,211);
+    console.log("code continues");
+  })(); 
   console.log("plus calc done and data pushed");
   
   console.log("now checking for 4...");

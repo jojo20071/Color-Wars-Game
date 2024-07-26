@@ -15,3 +15,7 @@ async function addData(input,line) {
     })
 
 }
+
+
+addData("test",2);
+console.log("code continues");
