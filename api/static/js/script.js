@@ -258,7 +258,7 @@ function verClick(clickedSquare){
   }
 
   if (newData["computing"] == 0) {
-    console.log("not at 4 yet, next players turn now");
+    console.log("next players turn now");
     if (data["c"] == "r") {
       newData["c"] = "b";
     }
