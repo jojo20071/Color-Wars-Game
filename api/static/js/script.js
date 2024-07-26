@@ -212,7 +212,7 @@ function compute4(fkey,i) {
   (async () => {
     await addData(newData,211);
     console.log("code continues");
-  })(); 
+  
   console.log("plus calc done and data pushed");
   
   console.log("now checking for 4...");
@@ -231,6 +231,7 @@ function compute4(fkey,i) {
   }
   console.log("no more 4s, final push");
   addData(newData,229);
+  })(); 
   
     
   
