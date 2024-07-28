@@ -11,4 +11,6 @@ body {
     left: 0;
     max-height: 60px;
     max-width: 60px;
+    min-width: 60px;
+    min-height: 60px;
 }
