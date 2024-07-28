@@ -4,8 +4,12 @@ body {
     background-color: #de8f70;
 }
 
-.logoimg {
-
+.logo {
     width: 60px;
     height: 60px;
+}
+.logoimg {
+    width: 60px;
+    height: 60px;
+
 }
