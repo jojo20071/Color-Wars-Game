@@ -33,25 +33,16 @@ h1 {
 .boxbox {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
+    gap: 20px; 
+
 }
 .redbox {
     background-color: #fe5f59;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px; /* Rounded edges */
 }
 .bluebox {
     background-color: #00c2ea;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px; /* Rounded edges */
 }
