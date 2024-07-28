@@ -38,9 +38,9 @@ def home():
 def game():
     return render_template('index.html')
 
-#@app.route('/')
-#def home2():
-#    return render_template('indexHome.html')
+@app.route('/')
+def home2():
+    return render_template('indexHome.html')
 
 
 @app.route('/add', methods=['POST'])
