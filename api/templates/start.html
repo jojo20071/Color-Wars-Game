@@ -13,10 +13,13 @@
 </head>
 <body id="body2">
         <img src="{{ url_for('static', filename='img.png') }}" alt="Logo" class="logoimg">
-        <h1>Color Wars</h1>
-        <p>Choose your Color</p>
-        <div class="redbox"></div>
-        <div class="bluebox"></div>
+        <h1><span class="color-red">Color</span> <span class="color-blue">Wars</span></h1>
+        <p class="choose">Choose your Color</p>
+        <div class="boxbox">
+            <div class="redbox"></div>
+            <div class="bluebox"></div>
+        </div>
+        
         <div>
             <p>Or play as a </p>
             <div></div>
