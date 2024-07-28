@@ -34,15 +34,18 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 20px; 
+    
 
 }
 .redbox {
     background-color: #fe5f59;
     padding: 20px;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 10px; 
+    width: 500px;
 }
 .bluebox {
     background-color: #00c2ea;
     padding: 20px;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 10px; 
+    width: 500px;
 }
