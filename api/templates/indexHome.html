@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" id="body">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000; user-scalable=0;" />
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleHome.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="">
+</head>
+<body id="body2">
+
+    <div class="container">
+        <button onclick="sred()">red</button>
+        <button onclick="sblue()">blue</button>
+        <div class="grid">
+            <div class="square" id=1 draggable="false"></div>
+            <div class="square"  id=2 draggable="false"></div>
+            <div class="square"  id=3 draggable="false"></div>
+            <div class="square" id=4 draggable="false"></div>
+            <div class="square" id=5 draggable="false"></div>
+            <div class="square" id=6 draggable="false"></div>
+            <div class="square" id=7 draggable="false"></div>
+            <div class="square" id=8 draggable="false"></div>
+            <div class="square" id=9 draggable="false"></div>
+            <div class="square" id=10 draggable="false"></div>
+            <div class="square" id=11 draggable="false"></div>
+            <div class="square" id=12 draggable="false"></div>
+            <div class="square" id=13 draggable="false"></div>
+            <div class="square" id=14 draggable="false"></div>
+            <div class="square" id=15 draggable="false"></div>
+            <div class="square" id=16 draggable="false"></div>
+            <div class="square" id=17 draggable="false"></div>
+            <div class="square" id=18 draggable="false"></div>
+            <div class="square" id=19 draggable="false"></div>
+            <div class="square" id=20 draggable="false"></div>
+            <div class="square" id=21 draggable="false"></div>
+            <div class="square" id=22 draggable="false"></div>
+            <div class="square" id=23 draggable="false"></div>
+            <div class="square" id=24 draggable="false"></div>
+            <div class="square" id=25 draggable="false"></div>
+            
+        </div>
+        <div class="reset-container" onclick="resetData()">
+            <div class="reset">RESET</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scriptHome.js') }}"></script>
+</body>
+</html>
