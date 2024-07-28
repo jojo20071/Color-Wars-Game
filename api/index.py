@@ -40,7 +40,7 @@ def game():
 
 @app.route('/')
 def home2():
-    return render_template('indexHome.html')
+    return render_template('start.html')
 
 
 @app.route('/add', methods=['POST'])
