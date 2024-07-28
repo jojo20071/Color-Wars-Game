@@ -41,11 +41,13 @@ h1 {
     background-color: #fe5f59;
     padding: 20px;
     border-radius: 10px; 
-    width: 500px;
+    width: 300px;
+    aspect-ratio: 1/1;
 }
 .bluebox {
     background-color: #00c2ea;
     padding: 20px;
     border-radius: 10px; 
-    width: 500px;
+    width: 300px;
+    aspect-ratio: 1/1;
 }
