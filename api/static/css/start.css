@@ -17,7 +17,7 @@ body {
 h1 {
     text-align: center;
     color: #fff;
-    font-size: 200px;
+    font-size: 180px;
     margin: 0;
     padding-top: 20px;
     font-family: "Rubik", sans-serif;
@@ -33,7 +33,7 @@ h1 {
 .boxbox {
     display: flex;
     justify-content: center;
-    gap: 150px; 
+    gap: 180px; 
     
 
 }
@@ -61,7 +61,7 @@ h1 {
 .choose {
     text-align: center;
     color: #fff;
-    font-size: 80px;
+    font-size: 70px;
     margin-top: 40px;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
@@ -69,7 +69,7 @@ h1 {
 .col {
     text-align: center;
     color: #fff;
-    font-size: 60px;
+    font-size: 50px;
     margin: 0; /* Remove margin to ensure proper centering */
     font-family: "Rubik", sans-serif;
     font-weight: 600;
