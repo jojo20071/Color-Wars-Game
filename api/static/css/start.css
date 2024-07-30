@@ -76,9 +76,16 @@ h1 {
 }
 
 
+.redbox, .bluebox {
+    transition: transform 0.2s ease-in-out;
+}
+
 .redbox:hover {
     background-color: #ff534a;
+    transform: scale(1.1); /* Scale up by 10% */
 }
+
 .bluebox:hover {
     background-color: #2380fa;
+    transform: scale(1.1); /* Scale up by 10% */
 }
