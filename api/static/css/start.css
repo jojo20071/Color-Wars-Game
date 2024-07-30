@@ -33,7 +33,7 @@ h1 {
 .boxbox {
     display: flex;
     justify-content: center;
-    gap: 50px; 
+    gap: 150px; 
     
 
 }
@@ -50,4 +50,13 @@ h1 {
     border-radius: 80px; 
     width: 300px;
     aspect-ratio: 1/1;
+}
+.choose {
+    text-align: center;
+    color: #fff;
+    font-size: 80px;
+    margin-top: 0;
+    padding-top: 20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
 }
