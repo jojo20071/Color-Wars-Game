@@ -41,7 +41,7 @@ h1 {
     background-color: #fe5f59;
     padding: 20px;
     border-radius: 80px; 
-    width: 280px;
+    width: 300px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -52,7 +52,7 @@ h1 {
     background-color: #00c2ea;
     padding: 20px;
     border-radius: 80px; 
-    width: 280px;
+    width: 300px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@ h1 {
     text-align: center;
     color: #fff;
     font-size: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 40px;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
