@@ -41,7 +41,7 @@ h1 {
     background-color: #fe5f59;
     padding: 20px;
     border-radius: 80px; 
-    width: 300px;
+    width: 280px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -52,7 +52,7 @@ h1 {
     background-color: #00c2ea;
     padding: 20px;
     border-radius: 80px; 
-    width: 300px;
+    width: 280px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -83,10 +83,10 @@ h1 {
 
 .redbox:hover {
     background-color: #ff534a;
-    transform: scale(1.1); /* Scale up by 10% */
+    transform: scale(1.05); /* Scale up by 10% */
 }
 
 .bluebox:hover {
     background-color: #2380fa;
-    transform: scale(1.1); /* Scale up by 10% */
+    transform: scale(1.05); /* Scale up by 10% */
 }
