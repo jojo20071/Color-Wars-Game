@@ -33,21 +33,21 @@ h1 {
 .boxbox {
     display: flex;
     justify-content: center;
-    gap: 20px; 
+    gap: 50px; 
     
 
 }
 .redbox {
     background-color: #fe5f59;
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 80px; 
     width: 300px;
     aspect-ratio: 1/1;
 }
 .bluebox {
     background-color: #00c2ea;
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 80px; 
     width: 300px;
     aspect-ratio: 1/1;
 }
